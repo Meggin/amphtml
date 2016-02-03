@@ -20,7 +20,7 @@ limitations under the License.
 
 # AMP HTML ⚡
 
-AMP HTML is a way to build web pages for static content that render with reliable, fast performance. It is our attempt at fixing what many perceive as painfully slow page load times – especially when reading content on the mobile web. See also: [What Is AMP?](https://www.ampproject.org/docs/get_started/about-amp.html). 
+[AMP HTML](https://www.ampproject.org/docs/get_started/about-amp.html) is a way to build web pages for static content that render with reliable, fast performance. It is our attempt at fixing what many perceive as painfully slow page load times – especially when reading content on the mobile web.
 
 AMP HTML is entirely built on existing web technologies. It achieves reliable performance by restricting some parts of HTML, CSS and JavaScript. These restrictions are enforced with a validator that ships with AMP HTML. To make up for those limitations AMP HTML defines a set of [custom elements](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/) for rich content beyond basic HTML. Learn more about [how AMP speeds up performance](https://www.ampproject.org/docs/get_started/technical_overview.html).
 
@@ -35,7 +35,7 @@ AMP HTML works by including the AMP JS library and adding a bit of boilerplate t
     <meta charset="utf-8">
     <link rel="canonical" href="hello-world.html" >
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>Hello World!</body>
@@ -59,7 +59,7 @@ The AMP JS library provides [builtin](builtins/README.md) AMP Components, manage
 ## The AMP Validator
 
 The AMP Validator allows a web developer to easily identify if the web page
-doesn't meet the AMP HTML specification.
+doesn't meet the [AMP HTML specification](spec/amp-html-format.md).
 
 Adding "#development=1" to the URL of the page instructs the AMP Runtime to run
 a series of assertions confirming the page's markup meets the AMP HTML
@@ -76,7 +76,7 @@ Learn more about [validating your AMP pages](https://www.ampproject.org/docs/gui
 
 ## AMP HTML Components
 
-AMP HTML Components are a series of additional custom elements that supplement
+AMP HTML Components are a series of extended custom elements that supplement
 or replace functionality of core HTML5 elements to allow the runtime to ensure
 it is solely responsible for loading external assets and to provide for shared
 best practices in implementation.
@@ -125,9 +125,6 @@ Reference:
 Technical Specifications:
 * [AMP HTML format specification](spec/amp-html-format.md)
 * [AMP HTML custom element specification](spec/amp-html-components.md)
-
-Blog posts:
- * [Accelerated Mobile Pages – A new approach to web performance](https://www.ampproject.org/how-it-works/)
 
 # Who makes AMP HTML?
 
