@@ -14,36 +14,33 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-### <a name="amp-list"></a> `amp-list`
+## <a name="amp-list"></a> `amp-list`
 
 The `amp-list` fetches the dynamic content from a CORS JSON endpoint and renders it
 using a supplied template.
 
-#### Usage
+### Usage
 
-The `amp-list` defines data source using the following attributes:
+The `amp-list` defines a data source using the following attributes:
 
-- `src` defines a CORS URL. The URL's protocol must be HTTPS.
-- `credentials` defines a `credentials` option as specified by the
-[Fetch API](https://fetch.spec.whatwg.org/). To send credentials, pass the
-value of "include".
+ - `src` defines a CORS URL. The URL's protocol must be HTTPS.
+ - `credentials` defines a `credentials` option as specified by the [Fetch API](https://fetch.spec.whatwg.org/). To send credentials, pass a value of "include".
 
-The response must be a JSON object that contains an array property "items":
+The response must be a JSON object that contains an array property called "items":
 ```json
 {
   "items": []
 }
 ```
 
-The template can be specified using either of the following two ways:
+The template can be specified in one of two ways:
 
-- `template` attribute that references an ID of an existing `template` element.
-- `template` element nested directly inside of this `amp-list` element.
+ - `template` attribute that references the ID of an existing `template` element.
+ - `template` element nested directly inside of this `amp-list` element.
 
 For more details on templates see [AMP HTML Templates](../../spec/amp-html-templates.md).
 
-Optionally, `amp-list` element can contain an element with `overflow` attribute. This
-element will be shown if AMP Runtime cannot resize the `amp-list` element as requested.
+Optionally, `amp-list` element can contain an element with an `overflow` attribute. This element is shown if the AMP Runtime cannot resize the `amp-list` element as requested.
 
 An example:
 ```html
@@ -68,31 +65,22 @@ An example:
 }
 ```
 
-The `amp-list` supports the following layouts: `fixed`, `fixed-height`,
-`responsive`, `fill`. See [AMP HTML Layout System](../../spec/amp-html-layout.md)
-for details.
+The `amp-list` supports the following layouts: `fixed`, `fixed-height`, `responsive`, and `fill`. See [AMP HTML Layout System](../../spec/amp-html-layout.md) for details.
 
-#### Substitutions
+### Substitutions
 
-The `amp-list` allows all standard URL variable substitutions.
-See [Substitutions Guide](../../spec/amp-var-substitutions.md) for more info.
+The `amp-list` allows all standard URL variable substitutions. See [Substitutions Guide](../../spec/amp-var-substitutions.md) for details.
 
-For instance:
+For example, this `amp-list`
 ```html
 <amp-list src="https://foo.com/list.json?RANDOM"></amp-list>
 ```
-may make a request to something like `https://foo.com/list.json?0.8390278471201` where the RANDOM value is randomly generated upon each impression.
+may make a request to something like `https://foo.com/list.json?0.8390278471201`, where the RANDOM value is randomly generated upon each impression.
 
-#### Behavior
+### Behavior
 
-The loading is triggered using normal AMP rules depending on how far the element is from
-the current viewport.
+The loading is triggered using normal AMP rules, depending on how far the element is from the current viewport.
 
-If `amp-list` needs more space after loading it requests the AMP runtime to update its
-height using the normal AMP flow. If AMP Runtime cannot satisfy the request for new
-height, it will display `overflow` element when available. Notice however, the typical
-placement of `amp-list` elements at the bottom of the document almost always guarantees
-that AMP Runtime can resize it.
+If `amp-list` needs more space after loading, it requests the AMP runtime to update its height using the normal AMP flow. If the AMP Runtime cannot satisfy the request for a new height, it displays an `overflow` element when available. Note, however, that the typical placement of `amp-list` elements at the bottom of the document almost always guarantees the AMP Runtime can resize it.
 
-By default, `amp-list` adds `list` ARIA role to the list element and `listitem` role to item
-elements rendered via the template.
+By default, `amp-list` adds the `list` ARIA role to the list element and the `listitem` role to item elements rendered via the template.
