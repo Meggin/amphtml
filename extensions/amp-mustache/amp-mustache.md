@@ -14,32 +14,30 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-### <a name="amp-mustache"></a> `amp-mustache`
+## <a name="amp-mustache"></a> `amp-mustache`
 
-The `amp-mustache` allows rendering of [Mustache.js](https://github.com/janl/mustache.js/) templates.
+The `amp-mustache` component allows rendering of [Mustache.js](https://github.com/janl/mustache.js/) templates.
 
-#### Syntax
+### Syntax
 
-Mustache is a logic-less template syntax. See [Mustache.js docs](https://github.com/janl/mustache.js/)
-for more details. Some of the core Mustache tags are:
+Mustache is a logic-less template syntax. See the [Mustache.js docs](https://github.com/janl/mustache.js/) for more details. Some of the core Mustache tags are:
 
-- `{{variable}}` - variable tag. It outputs the the HTML-escaped value of a variable;
-- `{{#section}}{{/section}}` - section tag. It can test existance of a variable and iterate over it if
-it's an array;
-- `{{^section}}{{/section}}` - inverted tag. It can test non-existance of a variable.
+ - `{{variable}}`: variable tag. It outputs the the HTML-escaped value of a variable.
+ - `{{#section}}{{/section}}`: section tag. It can test the existence of a variable and iterate over it if it is an array.
+ - `{{^section}}{{/section}}`: inverted tag. It can test the non-existence of a variable.
 
-#### Usage
+### Usage
 
-The `amp-mustache` template has to be defined and used according to the
-[AMP Template Spec](../../spec/amp-html-templates.md).
+The `amp-mustache` template must be defined and used according to the [AMP Template Spec](../../spec/amp-html-templates.md).
 
-First, the `amp-mustache` has to be declared/loaded like this:
+First, the `amp-mustache` is declared/loaded:
 
 ```html
-<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js">
+</script>
 ```
 
-Then, the Mustache templates can be defined in the `template` tags like this:
+Then, the Mustache templates can be defined in `template` tags:
 
 ```html
 <template type="amp-mustache">
@@ -47,19 +45,14 @@ Then, the Mustache templates can be defined in the `template` tags like this:
 </template>
 ```
 
-How templates are discovered, when they are rendered, how data is provided - all decided by the
-target AMP element that uses this template to render its content.
+How templates are discovered, when they are rendered, and how data is provided are all determined by the target AMP element that uses the template to render its content.
 
-#### Restrictions
+### Restrictions
 
-Like all AMP templates, `amp-mustache` templates are required to be well-formed DOM fragments. This means
-that among other things, you can't use `amp-mustache` to:
+Like all AMP templates, `amp-mustache` templates are required to be well-formed DOM fragments. This means that, among other things, you cannot use `amp-mustache` to:
 
-- Calculate tag name. E.g. `<{{tagName}}>` is not allowed.
-- Calculate attribute name. E.g. `<div {{attrName}}=something>` is not allowed.
-- Output arbitrary HTML using `{{{unescaped}}}`. The output of "triple-mustache" is sanitized to only allow
-formatting tags such as `<b>`, `<i>`, and so on.
+ - Calculate a tag name; e.g., `<{{tagName}}>` is not allowed.
+ - Calculate an attribute name; e.g., `<div {{attrName}}=something>` is not allowed.
+ - Output arbitrary HTML using `{{{unescaped}}}`; the output of "triple-mustache" is sanitized to only allow formatting tags such as `<b>`, `<i>`, and so on.
 
-Notice also that because the body of the template has to be specified within the `template` element, it is
-impossible to specify `{{&var}}` expressions - they will always be escaped as `{{&amp;var}}`. The triple-mustache
-`{{{var}}}` has to be used for these cases.
+Note also that, because the body of the template must be specified within the `template` element, it is impossible to specify `{{&var}}` expressions; they will always be escaped as `{{&amp;var}}`. The triple-mustache `{{{var}}}` must be used for these cases.
