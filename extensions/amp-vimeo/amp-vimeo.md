@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-### <a name="amp-vimeo"></a> `amp-vimeo`
+## <a name="amp-vimeo"></a> `amp-vimeo`
 
 Displays a Vimeo video.
 
@@ -23,15 +23,14 @@ Example:
 <amp-vimeo
     data-videoid="27246366"
     layout="responsive"
-    width="500" height="281"></amp-vimeo>
+    width="500" height="281">
+</amp-vimeo>
 ```
 
-With responsive layout the width and height from the example should yield correct layouts for 16:9 aspect ratio videos
+With responsive layout, the width and height from the example should yield correct layouts for 16:9 aspect ratio videos.
 
-#### Attributes
+### Attributes
 
 **data-videoid**
 
-The Vimeo video id found in every Vimeo video page URL
-
-E.g. in https://vimeo.com/27246366 27246366 is the video id.
+The Vimeo video ID found in every Vimeo video page URL. For example, in the URL `https://vimeo.com/27246366`, "27246366" is the video ID.
