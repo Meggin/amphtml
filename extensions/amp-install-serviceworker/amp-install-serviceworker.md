@@ -14,35 +14,33 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-### <a name="amp-install-serviceworker"></a> `amp-install-serviceworker`
+## <a name="amp-install-serviceworker"></a> `amp-install-serviceworker`
 
 The `amp-install-serviceworker` component allows installing a [ServiceWorker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) for the current page.
 
-The idea here is that this ServiceWorker runs whenever the AMP file is served from the origin where you publish the AMP file. The ServiceWorker will not be loaded when the document is loaded from an AMP cache.
+The idea is that the ServiceWorker runs whenever the AMP file is served from the origin where you publish the AMP file. The ServiceWorker will not be loaded when the document is loaded from an AMP cache.
 
-See [this article](https://medium.com/@cramforce/amps-and-websites-in-the-age-of-the-service-worker-8369841dc962) for how ServiceWorkers can help with making the AMP experience awesome with ServiceWorkers.
+See [this article](https://medium.com/@cramforce/amps-and-websites-in-the-age-of-the-service-worker-8369841dc962) for how ServiceWorkers can help improve the overall AMP experience.
 
 ### Example
 
 ```html
-
   <amp-install-serviceworker
       src="https://www.your-domain.com/serviceworker.js"
       layout="nodisplay"
   </amp-install-serviceworker>
-
 ```
 
 ### Behavior
 
-Registers the ServiceWorker given by the `src` attribute. If the current origin is different from the origin of the ServiceWorker, this custom element does nothing (Emits warning in development mode).
+The component registers the ServiceWorker given by the `src` attribute. If the current origin is different from the origin of the ServiceWorker, the component does nothing (although it emits a warning in development mode).
 
 ### Attributes
 
-#### `src`
+**`src`**
 
 URL of the ServiceWorker to register.
 
-#### `layout`
+**`layout`**
 
 Must have the value `nodisplay`.
