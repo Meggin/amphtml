@@ -2,7 +2,6 @@
 
 AMP Extensions are either extended components or extended templates.
 
-
 ## AMP HTML Extended Components
 
 Extended components must be explicitly included into the document as custom elements.
@@ -33,7 +32,6 @@ Current list of extended components:
 | [`amp-twitter`](amp-twitter/amp-twitter.md)               | Displays a Twitter Tweet.                                                                   |
 | [`amp-vine`](amp-vine/amp-vine.md)               | Displays a Vine simple embed.                                                                   |
 | [`amp-youtube`](amp-youtube/amp-youtube.md)               | Displays a Youtube video.                                                                   |
-
 
 ## AMP HTML Extended Templates
 
