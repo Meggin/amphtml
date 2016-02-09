@@ -13,14 +13,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-### <a name="amp-embed"></a> `amp-embed`
+## <a name="amp-embed"></a> `amp-embed`
 
 The `amp-embed` element is used to allow embedding elements in to the AMP page.
 
-#### Implementation
+### Implementation
 
-The `<amp-embed>` is actually an alias to the [`<amp-ad>`](amp-ad.md) tag, deriving all of it's functionality with a different tag name.
-Can be used instead of `<amp-ad>` when that would be semantically more accurate.
+The `<amp-embed>` is actually an alias to the [`<amp-ad>`](amp-ad.md) tag, deriving all of its functionality with a different tag name. Can be used instead of `<amp-ad>` when that would be semantically more accurate.
 
 ```html
 <amp-embed width=400 height=300
@@ -32,6 +31,6 @@ Can be used instead of `<amp-ad>` when that would be semantically more accurate.
 </amp-embed>
 ```
 
-#### Supported embed types
+### Supported embed types
 
 - [Taboola](../ads/taboola.md)
