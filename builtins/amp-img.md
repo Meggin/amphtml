@@ -39,13 +39,21 @@ The following lists validation errors specific to the `amp-img` tag
     <th width="40%"><strong>Validation Error</strong></th>
     <th>Description</th>
   </tr>
-    <tr>
+  <tr>
     <td width="40%"><a href="/docs/reference/validation_errors.html#mandatory-tag-ancestor-with-hint">MANDATORY_TAG_ANCESTOR_WITH_HINT</a></td>
     <td>Error thrown if your AMP document uses <code>img</code> instead of <code>amp-img</code>. Error message: <code>The tag <code>img</code> may only appear as a descendant of tag <code>noscript</code>. Did you mean <code>amp-img</code>?</code>.</td>
   </tr>
   <tr>
     <td width="40%"><a href="/docs/reference/validation_errors.html#mandatory-attribute-missing">MANDATORY_ONEOF_ATTR_MISSING</a></td>
     <td>Error thrown when neither <code>src</code> or <code>srcset</code> is included. One of these attributes is mandatory.</td>
+  </tr>
+  <tr>
+    <td width="40%"><a href="/docs/reference/validation_errors.html#missing-url">MISSING_URL</a></td>
+    <td>Error thrown when <code>src</code> or <code>srcset</code> attribute is missing it's URL.</td>
+  </tr>
+  <tr>
+    <td width="40%"><a href="/docs/reference/validation_errors.html#invalid-url">INVALID_URL</a></td>
+    <td>Error thrown when <code>src</code> or <code>srcset</code> attribute's URL is invalid.</td>
   </tr>
   <tr>
     <td width="40%"><a href="/docs/reference/validation_errors.html#implied-layout-isnt-supported-by-amp-tag">IMPLIED_LAYOUT_INVALID</a></td>
