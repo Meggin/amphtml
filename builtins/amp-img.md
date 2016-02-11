@@ -41,7 +41,7 @@ The following lists validation errors specific to the `amp-img` tag
   </tr>
     <tr>
     <td width="40%"><a href="/docs/reference/validation_errors.html#mandatory-tag-ancestor-with-hint">MANDATORY_TAG_ANCESTOR_WITH_HINT</a></td>
-    <td>Error thrown if your AMP document uses <code>img</code> instead of <code>amp-img</code>. Error message: The tag <code>img</code> may only appear as a descendant of tag <code>noscript</code>. Did you mean <code>amp-img</code>?</td>
+    <td>Error thrown if your AMP document uses <code>img</code> instead of <code>amp-img</code>. Error message: <code>The tag <code>img</code> may only appear as a descendant of tag <code>noscript</code>. Did you mean <code>amp-img</code>?</code>.</td>
   </tr>
   <tr>
     <td width="40%"><a href="/docs/reference/validation_errors.html#mandatory-attribute-missing">MANDATORY_ONEOF_ATTR_MISSING</a></td>

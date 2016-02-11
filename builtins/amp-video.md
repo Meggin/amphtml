@@ -41,7 +41,7 @@ The following lists validation errors specific to the `amp-video` tag
   </tr>
     <tr>
     <td width="40%"><a href="/docs/reference/validation_errors.html#mandatory-tag-ancestor-with-hint">MANDATORY_TAG_ANCESTOR_WITH_HINT</a></td>
-    <td>Error thrown if your AMP document uses <code>video</code> instead of <code>amp-video</code>. Error message: The tag <code>video</code> may only appear as a descendant of tag <code>noscript</code>. Did you mean <code>amp-video</code>?</td>
+    <td>Error thrown if your AMP document uses <code>video</code> instead of <code>amp-video</code>. Error message: <code>The tag <code>video</code> may only appear as a descendant of tag <code>noscript</code>. Did you mean <code>amp-video</code>?</code>.</td>
   </tr>
   <tr>
     <td width="40%"><a href="/docs/reference/validation_errors.html#implied-layout-isnt-supported-by-amp-tag">IMPLIED_LAYOUT_INVALID</a></td>

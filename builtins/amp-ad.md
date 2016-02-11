@@ -46,8 +46,16 @@ The following lists validation errors specific to the `amp-ad` tag
     <td>Error thrown when <code>type</code> attribute missing.</td>
   </tr>
   <tr>
-    <td width="40%"><a href="/docs/reference/validation_errors.html#disallowed-attribute">DISALLOWED_ATTR</a></td>
-    <td>Error thrown when tag includes disallowed <code>srcset</code> attribute.</td>
+    <td width="40%"><a href="/docs/reference/validation_errors.html#implied-layout-isnt-supported-by-amp-tag">MISSING_URL</a></td>
+    <td>Error thrown when <code>src</code> attribute is missing it's URL.</td>
+  </tr>
+  <tr>
+    <td width="40%"><a href="/docs/reference/validation_errors.html#implied-layout-isnt-supported-by-amp-tag">INVALID_URL</a></td>
+    <td>Error thrown when <code>src</code> attribute's URL is invalid.</td>
+  </tr>
+  <tr>
+    <td width="40%"><a href="/docs/reference/validation_errors.html#implied-layout-isnt-supported-by-amp-tag">INVALID_URL_PROTOCOL</a></td>
+    <td>Error thrown <code>src</code> attribute's URL is <code>http</code>; <code>https</code> protocol required.</td>
   </tr>
   <tr>
     <td width="40%"><a href="/docs/reference/validation_errors.html#implied-layout-isnt-supported-by-amp-tag">IMPLIED_LAYOUT_INVALID</a></td>
