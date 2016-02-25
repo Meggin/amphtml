@@ -14,17 +14,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-### <a name="amp-lightbox"></a> `amp-lightbox`
+## <a name="amp-lightbox"></a> `amp-lightbox`
 
-The `amp-lightbox` component allows for a “lightbox” or similar experience - where upon user interaction a component expands to fill the viewport, until it is closed again by the user.
+The `amp-lightbox` component allows for a “lightbox” or similar experience where, on user interaction, a component expands to fill the viewport until it is closed by the user.
 
-#### Behavior
+### Behavior
 
-The `amp-lightbox` component defines the child elements that will be displayed in a full-viewport overlay. It is triggered to take up the viewport when the user taps or clicks on an element with `on` attribute that targets `amp-lightbox` element’s `id`.
+The `amp-lightbox` component defines the child elements that are displayed in a full-viewport overlay. It is triggered to take up the viewport when the user taps or clicks an element with an `on` attribute that targets the `amp-lightbox` element’s `id`.
 
-#####Closing the lightbox
-Pressing the escape key on the keyboard will close the lightbox.
-Alternatively setting the `on` attribute on one or more elements within the lightbox and setting it's method to `close` will close the lightbox when the element is tapped or clicked.
+Pressing the `escape` key closes the lightbox. Alternatively, setting the `on` attribute on one or more elements within the lightbox to `close` closes the lightbox when the element is tapped or clicked.
 
 Example:
 ```html
@@ -37,6 +35,6 @@ Example:
 </amp-lightbox>
 ```
 
-#### Styling
+### Styling
 
 The `amp-lightbox` component can be styled with standard CSS.
