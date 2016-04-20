@@ -14,9 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
  
-### <a name="amp-vine"></a> `amp-vine`
+## <a name="amp-vine"></a> `amp-vine`
  
-Displays a Vine simple embed
+Displays a Vine simple embed.
 
 Example:
 ```html
@@ -27,8 +27,8 @@ Example:
 
 A Vine simple embed has equal width and height.
 
-#### Attributes
+### Attributes
 
 **data-vineid**
 
-The ID of the Vine. In a URL like https://vine.co/v/MdKjXez002d `MdKjXez002d` is the vineID.
+The ID of the Vine. In the URL `https://vine.co/v/MdKjXez002d`, "MdKjXez002d" is the vineID.
