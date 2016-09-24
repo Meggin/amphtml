@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-### <a name="amp-instagram"></a> `amp-instagram`
+## <a name="amp-instagram"></a> `amp-instagram`
 
 Displays an instagram embed.
 
@@ -28,18 +28,14 @@ Example:
 </amp-instagram>
 ```
 
-The `width` and `height` attributes are special for the instagram embed.
-These should be the actual width and height of the instagram image.
-The system automatically adds space for the "chrome" that instagram adds around the image.
+The `width` and `height` attributes have special considerations for the instagram embed. They should be set to the actual width and height of the instagram image alone; the system automatically adds space for the "chrome" that instagram adds around the image.
 
-Many instagrams are square. When you set `layout="responsive"` any value where `width` and `height` are the same will work. If the instagram is not square you will need to enter the actual dimensions of the image.
+Many instagrams are square. When you set `layout="responsive"`, any value where `width` and `height` are the same will work. However, if the instagram is not square you must use the actual dimensions of the image.
 
-When using non-responsive layout you will need to account for the extra space added for the "instagram chrome" around the image. This is currently 48px above and below the image and 8px on the sides.
+By contrast, when using a non-responsive layout you must account for the extra space added for the instagram "chrome" around the image. This is currently 48px above and below the image and 8px on the sides.
 
-#### Attributes
+### Attributes
 
 **data-shortcode**
 
-The instagram data-shortcode found in every instagram photo URL.
-
-E.g. in https://instagram.com/p/fBwFP fBwFP is the data-shortcode.
+The instagram data-shortcode found in every instagram photo URL. For example, in the URL `https://instagram.com/p/fBwFP`, "fBwFP" is the data-shortcode.
